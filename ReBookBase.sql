@@ -1,53 +1,48 @@
-CREATE TABLE Login
-(
-USERID INT,
-USERNAME VARCHAR(255),
+CREATE TABLE LOGIN (
+  USERID INT
+	,USERNAME VARCHAR(255)
+	,
+	)
+
 -- need help here: PASSWORD VARCHAR(20)
-)
+CREATE TABLE User (
+	USERID INT
+	,FNAME VARCHAR(255)
+	,LNAME VARCHAR(255)
+	,EMAIL VARCHAR(255)
+	,PHONE CHAR(8)
+	)
 
-CREATE TABLE User
-(
-USERID INT,
-FNAME VARCHAR(255),
-LNAME VARCHAR(255),
-EMAIL VARCHAR(255),
-PHONE CHARACTER(8)
-)
+CREATE TABLE Book (
+	BookID INT
+	,Title VARCHAR(255)
+	,Auther VARCHAR(255)
+	,Year INT
+	,Edition INT
+	,Printing INT
+	,CourseID INT
+	,
+	)
 
-CREATE TABLE Book
-(
-BookID INT,
-Title VARCHAR(255),
-Auther VARCHAR(255),
-Year INT,
-Edition INT,
-Printing INT,
-CourseID INT,
-)
+CREATE TABLE Course (
+	CourseID INT
+	,NAME STRING
+	,Semester STRING
+	,FieldID INT
+	)
 
-CREATE TABLE Course
-(
-CourseID INT,
-Name STRING,
-Semester STRING,
-FieldID INT
-)
+CREATE TABLE Field (
+	FieldID INT
+	,FieldName VARCHAR(255)
+	,ShortName CHAR(4)
+	)
 
-CREATE TABLE Field
-(
-FieldID INT, 
-FieldName VARCHAR(255), 
-ShortName CHAR(4)
-)
+CREATE TABLE Sale (
+	USERID INT
+	,BookID INT
+	)
 
-CREATE TABLE Sale
-(
-USERID INT,
-BookID INT
-)
-
-CREATE TABLE Wish
-(
-USERID INT,
-BookID INT
-)
+CREATE TABLE Wish (
+	USERID INT
+	,BookID INT
+	)
