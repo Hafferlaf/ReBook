@@ -25,8 +25,8 @@ CREATE TABLE Book (
 
 CREATE TABLE Course (
 	CourseID INT
-	,NAME STRING
-	,Semester STRING
+	,NAME VARCHAR(255)
+	,Semester VARCHAR(255)
 	,FieldID INT
 	)
 
