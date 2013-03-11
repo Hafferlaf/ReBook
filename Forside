@@ -1,0 +1,66 @@
+//@App id: 149509955212448
+<DOCTYPE! HTML5> 
+<HTML>
+  <head>
+  <p>
+  lol
+  </p>
+  </head>
+<body>
+
+<div id="fb-root"></div>
+<script>
+  // Additional JS functions here
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '149509955212448', // App ID
+      channelUrl : 'file:///home/jesper/Dropbox/DIKU/1.%20%C3%A5rs%20Projekt/Gi''EnBog/forside.html',     
+                                                                                        //Channel File
+      status     : true, // check login status
+      cookie     : true, // enable cookies to allow the server to access the session
+      xfbml      : true  // parse XFBML
+      });
+
+    FB.getLoginStatus(function(response) {
+       if (response.status === 'connected') { // connected & authorized!
+            <p>
+                Alles in ordnung!
+            </p>
+          } else if (response.status === 'not_authorized') { //not authoriszed
+            <p>
+              app needa be authorized!
+            </p>
+          } else {  //not logged in!
+            <p>
+               you needa log in!
+            </p>
+          }
+    });
+
+  };
+
+function login() {
+    FB.login(function(response) {
+        if (response.authResponse) {
+            // connected
+        } else {
+            // cancelled
+        }
+    });
+};
+
+  // Load the SDK Asynchronously
+  (function(d){
+     var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement('script'); js.id = id; js.async = true;
+     js.src = "//connect.facebook.net/en_US/all.js";
+     ref.parentNode.insertBefore(js, ref);
+   }(document));
+</script>
+
+</body>
+
+
+
+</HTML>
