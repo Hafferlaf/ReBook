@@ -1,10 +1,10 @@
 CREATE TABLE LOGIN (
   USERID INT
 	,USERNAME VARCHAR(255)
-	,
+-- need help here: ,PASSWORD VARCHAR(20)
 	)
 
--- need help here: PASSWORD VARCHAR(20)
+
 CREATE TABLE User (
 	USERID INT
 	,FNAME VARCHAR(255)
@@ -21,7 +21,6 @@ CREATE TABLE Book (
 	,Edition INT
 	,Printing INT
 	,CourseID INT
-	,
 	)
 
 CREATE TABLE Course (
