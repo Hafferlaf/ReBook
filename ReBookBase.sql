@@ -1,47 +1,41 @@
-CREATE TABLE LOGIN (
-  USERID INT
-	,USERNAME VARCHAR(255)
--- need help here: ,PASSWORD VARCHAR(20)
-	)
+DROP TABLE LOGIN;
+CREATE TABLE LOGIN (USERID INTEGER,
+                    USERNAME VARCHAR(255),
+                    PASSWORD VARCHAR(20));
 
+DROP TABLE User;
+CREATE TABLE User (USERID INTEGER,
+                   FNAME VARCHAR(255),
+                   LNAME VARCHAR(255),
+                   EMAIL VARCHAR(255),
+                   PHONE CHAR(8));
 
-CREATE TABLE User (
-	USERID INT
-	,FNAME VARCHAR(255)
-	,LNAME VARCHAR(255)
-	,EMAIL VARCHAR(255)
-	,PHONE CHAR(8)
-	)
+DROP TABLE Book;
+CREATE TABLE Book (BookID INTEGER,
+                   Title VARCHAR(255),
+                   Auther VARCHAR(255),
+                   Year INTEGER,
+                   Edition INTEGER,
+                   Printing INTEGER,
+                   CourseID INTEGER);
 
-CREATE TABLE Book (
-	BookID INT
-	,Title VARCHAR(255)
-	,Auther VARCHAR(255)
-	,Year INT
-	,Edition INT
-	,Printing INT
-	,CourseID INT
-	)
+DROP TABLE Course;
+CREATE TABLE Course (CourseID INTEGER,
+                     NAME VARCHAR(255),
+                     Semester VARCHAR(255),
+                     FieldID INTEGER);
 
-CREATE TABLE Course (
-	CourseID INT
-	,NAME VARCHAR(255)
-	,Semester VARCHAR(255)
-	,FieldID INT
-	)
+DROP TABLE Field;
+Create Table Field (Fieldid Integer,
+                    Fieldname Varchar(255),
+                    Shortname Char(4));
 
-CREATE TABLE Field (
-	FieldID INT
-	,FieldName VARCHAR(255)
-	,ShortName CHAR(4)
-	)
+DROP TABLE Sale;
+CREATE TABLE Sale (USERID INTEGER,
+                   BookID INTEGER);
 
-CREATE TABLE Sale (
-	USERID INT
-	,BookID INT
-	)
+DROP TABLE Wish;
+CREATE TABLE Wish (USERID INTEGER,
+                   BookID INTEGER);
 
-CREATE TABLE Wish (
-	USERID INT
-	,BookID INT
-	)
+COMMIT;
