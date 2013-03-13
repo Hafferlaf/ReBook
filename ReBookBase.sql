@@ -1,13 +1,12 @@
 DROP TABLE LOGIN;
 CREATE TABLE LOGIN (USERID INTEGER,
-                    USERNAME VARCHAR(255),
+                    EMAIL VARCHAR(255),
                     PASSWORD VARCHAR(20));
 
 DROP TABLE User;
 CREATE TABLE User (USERID INTEGER,
                    FNAME VARCHAR(255),
                    LNAME VARCHAR(255),
-                   EMAIL VARCHAR(255),
                    PHONE CHAR(8));
 
 DROP TABLE Book;
