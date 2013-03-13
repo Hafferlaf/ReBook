@@ -31,11 +31,13 @@ Create Table Field (Fieldid Integer,
                     Shortname Char(4));
 
 DROP TABLE Sale;
-CREATE TABLE Sale (USERID INTEGER,
+CREATE TABLE Sale (SaleID INTEGER,
+                   USERID INTEGER,
                    BookID INTEGER);
 
 DROP TABLE Wish;
-CREATE TABLE Wish (USERID INTEGER,
+CREATE TABLE Wish (BuyID INTEGER,
+                   USERID INTEGER,
                    BookID INTEGER);
 
 COMMIT;
